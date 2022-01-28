@@ -213,6 +213,24 @@ Improvements, suggestions and fixes are welcome.
 
 ## Changelog
 
+### 0.3 < active
+
+- completely rewritten all code
+- added asserts for all options
+- new options wrap, valign, value
+- added documentation README.md
+- written examples for each option
+- added busted tests
+- first public release
+
+### 0.2
+
+- didn't track all the changes
+
+### 0.1
+
+- first draft
+
 ## License
 
 The code is released under the MIT terms. Feel free to use it in both open and
