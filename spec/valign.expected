@@ -1,0 +1,39 @@
+item     note                   price discount qty
+──────── ────────────────────── ───── ──────── ───
+socks    nice and warm             10      0.4   5
+gloves   made of wool              55           25
+cardigan a bit pricey             255      0.1  11
+hat      this is long descripti    44      0.2  33
+         on for old fashioned h                   
+         at                                       
+shoes    for running              155            4
+keyring  this is a gift for our     1        1 400
+          regular clients                         	
+
+item     note                   price discount qty
+──────── ────────────────────── ───── ──────── ───
+socks    nice and warm             10      0.4   5
+gloves   made of wool              55           25
+cardigan a bit pricey             255      0.1  11
+         this is long descripti                   
+hat      on for old fashioned h    44      0.2  33
+         at                                       
+shoes    for running              155            4
+keyring  this is a gift for our     1        1 400
+          regular clients                         	
+
+item     note                   price discount qty
+──────── ────────────────────── ───── ──────── ───
+socks    nice and warm             10      0.4   5
+gloves   made of wool              55           25
+cardigan a bit pricey             255      0.1  11
+         this is long descripti                 33
+hat      on for old fashioned h            0.2    
+         at                        44             
+shoes    for running              155            4
+keyring  this is a gift for our              1 400
+          regular clients           1             	
+
+examples/valign.lua:46: invalid option 'valign' (string or table expected)
+examples/valign.lua:57: invalid option 'valign' ('top', 'middle' or 'bottom' expected)
+examples/valign.lua:70: invalid option 'valign' for column 2 ('top', 'middle' or 'bottom' expected)

@@ -1,0 +1,58 @@
+item     note          price discount qty total
+──────── ───────────── ───── ──────── ─── ─────
+socks    nice and warm    10      0.5   5      
+gloves   made of wool     55           25      
+cardigan a bit pricey    255      0.1  11      
+hat      old fashioned    44      0.2  33      
+shoes    for running     155            4      
+keyring  a gift            1        1 400      	
+
+item     note          price discount qty total
+──────── ───────────── ───── ──────── ─── ─────
+socks    nice and warm    10      0.5   5      
+gloves   made of wool     55        0  25      
+cardigan a bit pricey    255      0.1  11      
+hat      old fashioned    44      0.2  33      
+shoes    for running     155        0   4      
+keyring  a gift            1        1 400      	
+
+item     note          price discount qty  total
+──────── ───────────── ───── ──────── ─── ──────
+socks    nice and warm    10      0.5   5     25
+gloves   made of wool     55        0  25   1375
+cardigan a bit pricey    255      0.1  11 2524.5
+hat      old fashioned    44      0.2  33 1161.6
+shoes    for running     155        0   4    620
+keyring  a gift            1        1 400      0	
+
+item     note          price discount qty  total
+──────── ───────────── ───── ──────── ─── ──────
+socks    nice and warm    10     50 %   5   25.0
+gloves   made of wool     55      0 %  25 1375.0
+cardigan a bit pricey    255     10 %  11 2524.5
+hat      old fashioned    44     20 %  33 1161.6
+shoes    for running     155      0 %   4  620.0
+keyring  a gift            1    100 % 400    0.0
+──────── ───────────── ───── ──────── ─── ──────
+                                      478 5706.1	
+
+item     discount bar                                                           
+──────── ──────── ──────────────────────────────────────────────────────────────
+socks         0.5 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX                               
+gloves                                                                          
+cardigan      0.1 XXXXXX                                                        
+hat           0.2 XXXXXXXXXXXX                                                  
+shoes                                                                           
+keyring         1 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX	
+
+item     discount bar                   
+──────── ──────── ──────────────────────
+socks        50 % XXXXXXXXXXX           
+gloves                                  
+cardigan     10 % XX                    
+hat          20 % XXXX                  
+shoes                                   
+keyring     100 % XXXXXXXXXXXXXXXXXXXXXX	
+
+examples/value.lua:108: invalid option 'value' (table expected)
+examples/value.lua:119: invalid option 'value' for column 6 (function expected)

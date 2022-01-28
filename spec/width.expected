@@ -1,0 +1,77 @@
+item     note          price discount qty
+──────── ───────────── ───── ──────── ───
+socks    nice and warm    10      0.4   5
+gloves   made of wool     55           25
+cardigan a bit pricey    255      0.1  11
+hat      old fashioned    44      0.2  33
+shoes    for running     155            4
+keyring  a gift            1        1 400	
+
+item    note   price disc… qty
+─────── ────── ───── ───── ───
+socks   nice …    10   0.4   5
+gloves  made …    55        25
+cardig… a bit…   255   0.1  11
+hat     old f…    44   0.2  33
+shoes   for r…   155         4
+keyring a gift     1     1 400	
+
+… … … … …
+─ ─ ─ ─ ─
+… … … … 5
+… … …   …
+… … … … …
+… … … … …
+… … …   4
+… … 1 1 …	
+
+item  note pri… dis…  qty
+───── ──── ──── ──── ────
+socks nic…   10  0.4    5
+glov… mad…   55        25
+card… a b…  255  0.1   11
+hat   old…   44  0.2   33
+shoes for…  155         4
+keyr… a g…    1    1  400	
+
+item     note    price discount qty
+──────── ─────── ───── ──────── ───
+socks    nice a…    10      0.4   5
+gloves   made o…    55           25
+cardigan a bit …   255      0.1  11
+hat      old fa…    44      0.2  33
+shoes    for ru…   155            4
+keyring  a gift      1        1 400	
+
+item       note            price   discount        qty
+────────── ────────── ────────── ────────── ──────────
+socks      nice and …         10        0.4          5
+gloves     made of w…         55                    25
+cardigan   a bit pri…        255        0.1         11
+hat        old fashi…         44        0.2         33
+shoes      for runni…        155                     4
+keyring    a gift              1          1        400	
+
+1	8
+2	13
+3	5
+4	8
+5	3
+43
+┌────────┬─────────────┬─────┬────────┬───┐
+│item    │note         │price│discount│qty│
+├────────┼─────────────┼─────┼────────┼───┤
+│socks   │nice and warm│   10│     0.4│  5│
+│gloves  │made of wool │   55│        │ 25│
+│cardigan│a bit pricey │  255│     0.1│ 11│
+│hat     │old fashioned│   44│     0.2│ 33│
+│shoes   │for running  │  155│        │  4│
+│keyring │a gift       │    1│       1│400│
+└────────┴─────────────┴─────┴────────┴───┘
+examples/width.lua:85: invalid option 'widthDefault' (number or 'auto' or 'data' expected)
+examples/width.lua:96: invalid option 'widthDefault' (number >= 1 expected)
+examples/width.lua:107: invalid option 'widthDefault' (number or 'auto' or 'data' expected)
+examples/width.lua:118: invalid option 'width' (table expected)
+examples/width.lua:129: invalid option 'width' for column 2 (number >= 1 expected)
+examples/width.lua:140: invalid option 'width' for column 3 (number or 'auto' or 'data' expected)
+examples/width.lua:151: invalid option 'totalWidth' (number >= 1 expected)

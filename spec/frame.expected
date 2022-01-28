@@ -1,0 +1,60 @@
+item     note          price discount qty value
+──────── ───────────── ───── ──────── ─── ─────
+socks    nice and warm    10        0   5      
+gloves   made of wool     55      0.4  25      
+cardigan a bit pricey    255      0.1  11      
+hat      old fashioned    44      0.2  33      
+shoes    for running     155        0   4      	
+
+┌────────┬─────────────┬─────┬────────┬───┬─────┐
+│item    │note         │price│discount│qty│value│
+├────────┼─────────────┼─────┼────────┼───┼─────┤
+│socks   │nice and warm│   10│       0│  5│     │
+│gloves  │made of wool │   55│     0.4│ 25│     │
+│cardigan│a bit pricey │  255│     0.1│ 11│     │
+│hat     │old fashioned│   44│     0.2│ 33│     │
+│shoes   │for running  │  155│       0│  4│     │
+└────────┴─────────────┴─────┴────────┴───┴─────┘	
+
+╔════════╦═════════════╦═════╦════════╦═══╦═════╗
+║item    ║note         ║price║discount║qty║value║
+╠════════╬═════════════╬═════╬════════╬═══╬═════╣
+║socks   ║nice and warm║   10║       0║  5║     ║
+║gloves  ║made of wool ║   55║     0.4║ 25║     ║
+║cardigan║a bit pricey ║  255║     0.1║ 11║     ║
+║hat     ║old fashioned║   44║     0.2║ 33║     ║
+║shoes   ║for running  ║  155║       0║  4║     ║
+╚════════╩═════════════╩═════╩════════╩═══╩═════╝	
+
++--------+-------------+-----+--------+---+-----+
+|item    |note         |price|discount|qty|value|
++--------+-------------+-----+--------+---+-----+
+|socks   |nice and warm|   10|       0|  5|     |
+|gloves  |made of wool |   55|     0.4| 25|     |
+|cardigan|a bit pricey |  255|     0.1| 11|     |
+|hat     |old fashioned|   44|     0.2| 33|     |
+|shoes   |for running  |  155|       0|  4|     |
++--------+-------------+-----+--------+---+-----+	
+
+─────────┬───────────────┬───────┬──────────┬─────┬───────┬┐
+item···· │ note········· │ price │ discount │ qty │ value ││
+─────────┼───────────────┼───────┼──────────┼─────┼───────┼┤
+socks··· │ nice and warm │ ···10 │ ·······0 │ ··5 │ ····· ││
+gloves·· │ made of wool· │ ···55 │ ·····0.4 │ ·25 │ ····· ││
+cardigan │ a bit pricey· │ ··255 │ ·····0.1 │ ·11 │ ····· ││
+hat····· │ old fashioned │ ···44 │ ·····0.2 │ ·33 │ ····· ││
+shoes··· │ for running·· │ ··155 │ ·······0 │ ··4 │ ····· ││	
+
+item···· note········· price discount qty value
+──────── ───────────── ───── ──────── ─── ─────
+socks··· nice and warm ···10 ·······0 ··5 ·····
+gloves·· made of wool· ···55 ·····0.4 ·25 ·····
+cardigan a bit pricey· ··255 ·····0.1 ·11 ·····
+hat····· old fashioned ···44 ·····0.2 ·33 ·····
+shoes··· for running·· ··155 ·······0 ··4 ·····	
+
+examples/frame.lua:86: invalid option 'frame' (table with 17 strings expected)
+examples/frame.lua:96: invalid option 'frame' at index 12 (string expected)
+examples/frame.lua:107: invalid option 'frame' at index 2 (0 or 1 UTF-8 characters expected)
+examples/frame.lua:118: invalid option 'frame' at index 6 (1 UTF-8 character expected)
+examples/frame.lua:129: invalid option 'frame' at index 1 (only one color within string expected)

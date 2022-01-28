@@ -1,0 +1,46 @@
+item              note              price dis. qty
+───────────────── ───────────────── ───── ──── ───
+socks             nice and warm        10  0.4   5
+gloves            made of wool         55       25
+cardigan          a bit pricey        255  0.1  11
+hat's name that … this is long des…    44  0.2  33
+shoes             for running         155        4
+keyring           this is a gift f…     1    1 400	
+
+item              note              price dis. qty
+───────────────── ───────────────── ───── ──── ───
+socks             nice and warm        10  0.4   5
+gloves            made of wool         55       25
+cardigan          a bit pricey        255  0.1  11
+hat's name that … this is long des…    44  0.2  33
+shoes             for running         155        4
+keyring           this is a gift f…     1    1 400	
+
+item              note              price dis. qty
+───────────────── ───────────────── ───── ──── ───
+socks             nice and warm        10  0.4   5
+gloves            made of wool         55       25
+cardigan          a bit pricey        255  0.1  11
+hat's name that i this is long desc    44  0.2  33
+s very long       ription for old f               
+                  ashioned hat                    
+shoes             for running         155        4
+keyring           this is a gift fo     1    1 400
+                  r our regular cli               
+                  ents                            	
+
+item              note              price dis. qty
+───────────────── ───────────────── ───── ──── ───
+socks             nice and warm        10  0.4   5
+gloves            made of wool         55       25
+cardigan          a bit pricey        255  0.1  11
+hat's name that i this is long         44  0.2  33
+s very long       description for                 
+                  old fashioned hat               
+shoes             for running         155        4
+keyring           this is a gift        1    1 400
+                  for our regular                 
+                  clients                         	
+
+examples/wrap.lua:91: invalid option 'wrap' (boolean or function expected)
+examples/wrap.lua:103: invalid option 'wrap' for column 2 (boolean or function expected)

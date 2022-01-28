@@ -1,0 +1,68 @@
+item     note          price discount qty
+──────── ───────────── ───── ──────── ───
+socks    nice and warm    10        0   5
+hat      old fashioned    44      0.2  33
+hat      stylish          60      0.1  20
+gloves   made of wool     55      0.4  25
+cardigan a bit pricey    255      0.1  11
+HAT      modern           40      0.2  25
+Shoes    for running     155        0   4
+hat      cheap            10        0  50	
+
+item     note          price discount qty
+──────── ───────────── ───── ──────── ───
+socks    nice and warm    10        0   5
+hat      cheap            10        0  50
+HAT      modern           40      0.2  25
+hat      old fashioned    44      0.2  33
+gloves   made of wool     55      0.4  25
+hat      stylish          60      0.1  20
+Shoes    for running     155        0   4
+cardigan a bit pricey    255      0.1  11	
+
+item     note          price discount qty
+──────── ───────────── ───── ──────── ───
+cardigan a bit pricey    255      0.1  11
+Shoes    for running     155        0   4
+hat      stylish          60      0.1  20
+gloves   made of wool     55      0.4  25
+hat      old fashioned    44      0.2  33
+HAT      modern           40      0.2  25
+socks    nice and warm    10        0   5
+hat      cheap            10        0  50	
+
+item     note          price discount qty
+──────── ───────────── ───── ──────── ───
+HAT      modern           40      0.2  25
+Shoes    for running     155        0   4
+cardigan a bit pricey    255      0.1  11
+gloves   made of wool     55      0.4  25
+hat      stylish          60      0.1  20
+hat      old fashioned    44      0.2  33
+hat      cheap            10        0  50
+socks    nice and warm    10        0   5	
+
+item     note          price discount qty
+──────── ───────────── ───── ──────── ───
+cardigan a bit pricey    255      0.1  11
+gloves   made of wool     55      0.4  25
+hat      stylish          60      0.1  20
+hat      old fashioned    44      0.2  33
+HAT      modern           40      0.2  25
+hat      cheap            10        0  50
+Shoes    for running     155        0   4
+socks    nice and warm    10        0   5	
+
+item     note          price discount qty
+──────── ───────────── ───── ──────── ───
+cardigan a bit pricey    255      0.1  11
+gloves   made of wool     55      0.4  25
+hat      stylish          60      0.1  20
+hat      old fashioned    44      0.2  33
+HAT      modern           40      0.2  25
+hat      cheap            10        0  50
+Shoes    for running     155        0   4
+socks    nice and warm    10        0   5	
+
+examples/sort.lua:67: invalid option 'sort' (string or table expected)
+examples/sort.lua:79: invalid option 'sort' (column 'missing' doesn't exist)

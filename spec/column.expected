@@ -1,0 +1,34 @@
+discount item     note          price qty
+──────── ──────── ───────────── ───── ───
+       0 socks    nice and warm    10   5
+     0.4 gloves   made of wool     55  25
+     0.1 cardigan a bit pricey    255  11
+     0.2 hat      old fashioned    44  33
+       0 shoes    for running     155   4	
+
+item     note          price discount qty
+──────── ───────────── ───── ──────── ───
+socks    nice and warm    10        0   5
+gloves   made of wool     55      0.4  25
+cardigan a bit pricey    255      0.1  11
+hat      old fashioned    44      0.2  33
+shoes    for running     155        0   4	
+
+item     note          price discount qty value
+──────── ───────────── ───── ──────── ─── ─────
+socks    nice and warm    10        0   5      
+gloves   made of wool     55      0.4  25      
+cardigan a bit pricey    255      0.1  11      
+hat      old fashioned    44      0.2  33      
+shoes    for running     155        0   4      	
+
+item     note          price discount qty value item     note         
+──────── ───────────── ───── ──────── ─── ───── ──────── ─────────────
+socks    nice and warm    10        0   5       socks    nice and warm
+gloves   made of wool     55      0.4  25       gloves   made of wool 
+cardigan a bit pricey    255      0.1  11       cardigan a bit pricey 
+hat      old fashioned    44      0.2  33       hat      old fashioned
+shoes    for running     155        0   4       shoes    for running  	
+
+examples/column.lua:40: invalid option 'column' (table with at least one column name expected)
+examples/column.lua:49: invalid option 'column' (table with at least one column name expected)

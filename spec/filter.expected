@@ -1,0 +1,23 @@
+item     note          price discount qty
+──────── ───────────── ───── ──────── ───
+socks    nice and warm    10        0   5
+gloves   made of wool     55      0.4  25
+cardigan a bit pricey    255      0.1  11
+hat      old fashioned    44      0.2  33
+shoes    for running     155        0   4	
+
+item     note         price discount qty
+──────── ──────────── ───── ──────── ───
+cardigan a bit pricey   255      0.1  11
+shoes    for running    155        0   4	
+
+item  note          price discount qty
+───── ───────────── ───── ──────── ───
+socks nice and warm    10        0   5
+shoes for running     155        0   4	
+
+item  note        price discount qty
+───── ─────────── ───── ──────── ───
+shoes for running   155        0   4	
+
+examples/filter.lua:40: invalid option 'filter' (function expected)

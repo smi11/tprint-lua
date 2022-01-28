@@ -1,0 +1,39 @@
+item     note          price discount qty
+──────── ───────────── ───── ──────── ───
+socks    nice and warm    10        0   5
+gloves   made of wool     55      0.4  25
+cardigan a bit pricey    255      0.1  11
+hat      old fashioned    44      0.2  33
+shoes    for running     155        0   4	
+
+  item       note      price discount qty
+──────── ───────────── ───── ──────── ───
+ socks   nice and warm  10      0      5 
+ gloves  made of wool   55     0.4    25 
+cardigan a bit pricey   255    0.1    11 
+  hat    old fashioned  44     0.2    33 
+ shoes    for running   155     0      4 	
+
+item              note price discount qty
+──────── ───────────── ───── ──────── ───
+socks    nice and warm    10        0 5  
+gloves    made of wool    55      0.4 25 
+cardigan  a bit pricey   255      0.1 11 
+hat      old fashioned    44      0.2 33 
+shoes      for running   155        0 4  	
+
+1	left
+2	center
+3	right
+4	right
+5	left
+item         note      price discount qty
+──────── ───────────── ───── ──────── ───
+socks    nice and warm    10        0 5  
+gloves   made of wool     55      0.4 25 
+cardigan a bit pricey    255      0.1 11 
+hat      old fashioned    44      0.2 33 
+shoes     for running    155        0 4  
+examples/align.lua:45: invalid option 'align' (string or table expected)
+examples/align.lua:55: invalid option 'align' ('left', 'right' or 'center' expected)
+examples/align.lua:65: invalid option 'align' in column 4 ('left', 'right' or 'center' expected)

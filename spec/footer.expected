@@ -1,0 +1,78 @@
+item     note          price discount qty item    
+──────── ───────────── ───── ──────── ─── ────────
+socks    nice and warm    10      0.4   5 socks   
+gloves   made of wool     55           25 gloves  
+cardigan a bit pricey    255      0.1  11 cardigan
+hat      old fashioned    44      0.2  33 hat     
+shoes    for running     155            4 shoes   	
+
+item     note             price discount  qty item    
+──────── ───────────── ──────── ──────── ──── ────────
+socks    nice and warm       10      0.4    5 socks   
+gloves   made of wool        55            25 gloves  
+cardigan a bit pricey       255      0.1   11 cardigan
+hat      old fashioned       44      0.2   33 hat     
+shoes    for running        155             4 shoes   
+──────── ───────────── ──────── ──────── ──── ────────
+                       Avarage?          Sum?         	
+
+item     note          price discount qty item    
+──────── ───────────── ───── ──────── ─── ────────
+socks    nice and warm    10      0.4   5 socks   
+gloves   made of wool     55           25 gloves  
+cardigan a bit pricey    255      0.1  11 cardigan
+hat      old fashioned    44      0.2  33 hat     
+shoes    for running     155            4 shoes   
+──────── ───────────── ───── ──────── ─── ────────
+                       103.8           78         	
+
+item     note          price discount discount qty item    
+──────── ───────────── ───── ──────── ──────── ─── ────────
+socks    nice and warm    10      0.4      0.4   5 socks   
+gloves   made of wool     55                    25 gloves  
+cardigan a bit pricey    255      0.1      0.1  11 cardigan
+hat      old fashioned    44      0.2      0.2  33 hat     
+shoes    for running     155                     4 shoes   
+──────── ───────────── ───── ──────── ──────── ─── ────────
+                       103.8      0.7    0.175  78         	
+
+item     note          price discount         discount qty item    
+──────── ───────────── ───── ──────── ──────────────── ─── ────────
+socks    nice and warm    10      0.4              0.4   5 socks   
+gloves   made of wool     55                            25 gloves  
+cardigan a bit pricey    255      0.1              0.1  11 cardigan
+hat      old fashioned    44      0.2              0.2  33 hat     
+shoes    for running     155                             4 shoes   
+──────── ───────────── ───── ──────── ──────────────── ─── ────────
+                       103.8      0.7 0.23333333333333  78         	
+
+item        note          price discount qty item       
+─────────── ───────────── ───── ──────── ─── ───────────
+socks       nice and warm    10      0.4   5 socks      
+gloves      made of wool     55           25 gloves     
+cardigan    a bit pricey    255      0.1  11 cardigan   
+hat         old fashioned    44      0.2  33 hat        
+shoes       for running     155            4 shoes      
+─────────── ───────────── ───── ──────── ─── ───────────
+not numbers not numbers     519      0.7  78 not numbers	
+
+item     note          price discount qty item    
+──────── ───────────── ───── ──────── ─── ────────
+socks    nice and warm    10      0.4   5 socks   
+gloves   made of wool     55           25 gloves  
+cardigan a bit pricey    255      0.1  11 cardigan
+hat      old fashioned    44      0.2  33 hat     
+shoes    for running     155            4 shoes   
+                       103.8           78         	
+
+item     note          price discount qty item    
+──────── ───────────── ───── ──────── ─── ────────
+socks    nice and warm    10      0.4   5 socks   
+gloves   made of wool     55           25 gloves  
+cardigan a bit pricey    255      0.1  11 cardigan
+hat      old fashioned    44      0.2  33 hat     
+shoes    for running     155            4 shoes   
+──────── ───────────── ───── ──────── ─── ────────	
+
+examples/footer.lua:93: invalid option 'footer' (table or function expected)
+examples/footer.lua:103: invalid option 'footer' for column 2 (string or function expected)
