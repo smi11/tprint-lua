@@ -12,7 +12,7 @@ local list = {
 }
 
 -- value is a function applied to columns which allows us to either
--- modify values or calculate new ones
+-- modify cell values or calculate new ones
 
 -- first argument is table of current row / current object (self)
 -- second argument is column name
@@ -31,11 +31,29 @@ print(tp(list,{column={"item","note","price","discount","qty","total"}}), "\n")
 print(tp(list,{column={"item","note","price","discount","qty","total"},
                value={discount=function(row,col) return row[col] or 0 end}}), "\n")
 
+-- we can apply same function to all columns
+
+local function changeall(row,col)
+  if col == "price" then
+    return row[col] + 10000
+  elseif type(row[col]) == "string" then
+    if col == "note" then
+      return ">>" .. row[col] .. "<<"
+    else
+      return "<" .. row[col] .. ">"
+    end
+  end
+  return row[col] -- just return cell's value as it is
+end
+
+print(tp(list,{column={"item","note","price","discount","qty","total"},
+               value=changeall}), "\n")
+
 -- let's calculate total
 -- note that each calculation for each column needs to be done in full,
 -- in other words you can't use calculations of other columns
 -- as the order of evaluation is arbitrary
--- also we only get references to our original table (row, value)
+-- also we only get references to our original table (row, column)
 
 print(tp(list,{column={"item","note","price","discount","qty","total"},
                format={total="%g"},
@@ -102,11 +120,11 @@ print(tp(list,{column={"item","discount","bar"},
 local _, msg, err
 
 -- example of invalid setting
--- should be table
+-- should be table or function
 
 function err()
   print(tp(list,{column={"item","note","price","discount","qty","total"},
-                 value="not a table"}), "\n")
+                 value="not a table or function"}), "\n")
 end
 
 _, msg = pcall(err)

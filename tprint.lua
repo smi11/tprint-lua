@@ -727,18 +727,24 @@ function M.new(t, options)
   o.footerSeparator = o.footerSeparator == nil and o.footer ~= nil or o.footerSeparator
 
   -- value = optional functions to apply to every item by columns: f(self,val) -> value
-  fassert(type(o.value)=="table" or o.value == nil,
+  fassert(type(o.value)=="table" or type(o.value)=="function" or o.value == nil,
           "invalid option 'value' (table expected)")
   o.value = o.value or {}
-  for i, col in ipairs(o.column) do
-    if o.value[i] == nil then
-      o.value[i] = o.value[col]
+  if iscallable(o.value) then
+    local f = o.value
+    o.value = {}
+    M.each(o.column, function(i) o.value[i] = f end)
+  else
+    for i, col in ipairs(o.column) do
       if o.value[i] == nil then
-        o.value[i] = function(r,c) return r[c] end
+        o.value[i] = o.value[col]
+        if o.value[i] == nil then
+          o.value[i] = function(r,c) return r[c] end
+        end
       end
+      fassert(type(o.value[i])=="function",
+              "invalid option 'value' for column %i (function expected)",i)
     end
-    fassert(type(o.value[i])=="function",
-            "invalid option 'value' for column %i (function expected)",i)
   end
 
   -- format specifiers for string.format for each column

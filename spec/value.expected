@@ -16,6 +16,15 @@ hat      old fashioned    44      0.2  33
 shoes    for running     155        0   4      
 keyring  a gift            1        1 400      	
 
+item       note              price discount qty total
+────────── ───────────────── ───── ──────── ─── ─────
+<socks>    >>nice and warm<< 10010      0.5   5      
+<gloves>   >>made of wool<<  10055           25      
+<cardigan> >>a bit pricey<<  10255      0.1  11      
+<hat>      >>old fashioned<< 10044      0.2  33      
+<shoes>    >>for running<<   10155            4      
+<keyring>  >>a gift<<        10001        1 400      	
+
 item     note          price discount qty  total
 ──────── ───────────── ───── ──────── ─── ──────
 socks    nice and warm    10      0.5   5     25
@@ -54,5 +63,5 @@ hat          20 % XXXX
 shoes                                   
 keyring     100 % XXXXXXXXXXXXXXXXXXXXXX	
 
-examples/value.lua:108: invalid option 'value' (table expected)
-examples/value.lua:119: invalid option 'value' for column 6 (function expected)
+examples/value.lua:126: invalid option 'value' (table expected)
+examples/value.lua:137: invalid option 'value' for column 6 (function expected)
