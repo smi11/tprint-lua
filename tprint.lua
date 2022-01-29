@@ -74,6 +74,7 @@
       - written examples for each option
       - added busted tests
       - first public release
+      - modified option value to accept f(row,col[,width])
 
  0.2
       - didn't track all the changes

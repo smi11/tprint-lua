@@ -197,8 +197,6 @@ print(tprint(list, {column={"item", "note", "price"},
 
 See: `examples/*.lua`
 
-##### `__tostring metamethod`
-
 ## Tests
 
 Running test specs is done using Olivine-Labs [busted](http://olivinelabs.com/busted/). You can install it using [LuaRocks](http://www.luarocks.org/):
@@ -215,7 +213,7 @@ Improvements, suggestions and fixes are welcome.
 
 ## Changelog
 
-### 0.3 < active
+### 0.3
 
 - completely rewritten all code
 - added asserts for all options
@@ -224,6 +222,7 @@ Improvements, suggestions and fixes are welcome.
 - written examples for each option
 - added busted tests
 - first public release
+- modified option value to accept f(row,col[,width])
 
 ### 0.2
 
