@@ -15,10 +15,10 @@ local list = {
 -- modify values or calculate new ones
 
 -- first argument is table of current row / current object (self)
--- second argument is columns value if present
+-- second argument is column name
 -- third argument is width, which is only present if we request callback
 
--- f(row,value[,width]) --> new value, callback function
+-- f(row,column[,width]) --> new value, callback function
 
 -- by default value is disabled
 
@@ -29,7 +29,7 @@ print(tp(list,{column={"item","note","price","discount","qty","total"}}), "\n")
 -- set missing/nil discounts to 0
 
 print(tp(list,{column={"item","note","price","discount","qty","total"},
-               value={discount=function(_,val) return val or 0 end}}), "\n")
+               value={discount=function(row,col) return row[col] or 0 end}}), "\n")
 
 -- let's calculate total
 -- note that each calculation for each column needs to be done in full,
@@ -39,8 +39,8 @@ print(tp(list,{column={"item","note","price","discount","qty","total"},
 
 print(tp(list,{column={"item","note","price","discount","qty","total"},
                format={total="%g"},
-               value={discount=function(row,val) return val or 0 end,
-                      total=function(self,val)
+               value={discount=function(row,col) return row[col] or 0 end,
+                      total=function(self,col)
                         local total = self.price * self.qty
                         return total - (self.discount or 0) * total
                       end}}), "\n")
@@ -59,8 +59,8 @@ local function percent(val)
 end
 
 print(tp(list,{column={"item","note","price","discount","qty","total"},
-               value={discount=function(_,val) return val or 0 end,
-                      total=function(self,val)
+               value={discount=function(row,col) return row[col] or 0 end,
+                      total=function(self,col)
                         local total = self.price * self.qty
                         return total - (self.discount or 0) * total
                       end},
@@ -75,7 +75,7 @@ print(tp(list,{column={"item","note","price","discount","qty","total"},
 -- however if we need column width, we can request callback after
 -- column width is established
 
-local function bar(row,val,width)
+local function bar(row,col,width)
   -- width is always nil unless we request callback
   if not width then
     -- on the first call we return some dummy value wide enough

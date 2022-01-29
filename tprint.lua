@@ -593,7 +593,7 @@ function mt:__tostring()
     for i, key in ipairs(self.column) do
       local val = self.datac[i][l]
       if iscallable(val) then -- callback requested?
-        val = val(self.data[l],self.data[l][key],width[i])
+        val = val(self.data[l],key,width[i])
       end
       val = self.wrap[i](format[i](val),width[i],frame[17])
       if type(val) == "string" then val = {val} end
@@ -726,14 +726,14 @@ function M.new(t, options)
   o.footerSeparator = o.footerSeparator == nil and o.footer ~= nil or o.footerSeparator
 
   -- value = optional functions to apply to every item by columns: f(self,val) -> value
-  if o.value == nil then o.value = {} end
-  fassert(type(o.value)=="table",
+  fassert(type(o.value)=="table" or o.value == nil,
           "invalid option 'value' (table expected)")
+  o.value = o.value or {}
   for i, col in ipairs(o.column) do
     if o.value[i] == nil then
       o.value[i] = o.value[col]
       if o.value[i] == nil then
-        o.value[i] = function(_,val) return val end
+        o.value[i] = function(r,c) return r[c] end
       end
     end
     fassert(type(o.value[i])=="function",
@@ -742,28 +742,26 @@ function M.new(t, options)
 
   -- format specifiers for string.format for each column
   -- or function that returns formatted string
-  o.format = o.format == nil and {} or o.format
-  if type(o.format) == "table" then
-    for i, col in ipairs(o.column) do
+  fassert(type(o.format)=="table" or o.format == nil,
+          "invalid option 'format' (table expected)")
+  o.format = o.format or {}
+  for i, col in ipairs(o.column) do
+    if o.format[i] == nil then
+      o.format[i] = o.format[col]
       if o.format[i] == nil then
-        o.format[i] = o.format[col]
-        if o.format[i] == nil then
-          o.format[i] = function(val)
-            return val == nil and "" or tostring(val)
-          end
-        end
-      end
-      if type(o.format[i]) == "string" then
-        local fmt = o.format[i]
         o.format[i] = function(val)
-          return val ~= nil and utf8.format(fmt, val) or ""
+          return val == nil and "" or tostring(val)
         end
       end
-      fassert(type(o.format[i])=="function",
-              "invalid option 'format' for column %i (string or function expected)",i)
     end
-  else
-    error("invalid option 'format' (table expected)",2+stackofs)
+    if type(o.format[i]) == "string" then
+      local fmt = o.format[i]
+      o.format[i] = function(val)
+        return val ~= nil and utf8.format(fmt, val) or ""
+      end
+    end
+    fassert(type(o.format[i])=="function",
+            "invalid option 'format' for column %i (string or function expected)",i)
   end
 
   -- wrap = boolean or function f(value) -> value [, value...]
@@ -906,7 +904,7 @@ function M.new(t, options)
   local rows
   for rowi, rowt in ipairs(o.data) do
     for i, ckey in ipairs(o.column) do
-      local val, callback = o.value[i](rowt,rowt[ckey])
+      local val, callback = o.value[i](rowt,ckey)
       local v = eansi.nopaint(o.format[i](val))
       maxWidth[i] = math.max(len(tostring(v)),(maxWidth[i] or 0))
       o.align[i] = o.align[i] or o.align[ckey] or type(val) == "number" and "right" or "left"
