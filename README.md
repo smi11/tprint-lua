@@ -1,6 +1,6 @@
 # tprint 0.3 Table Printer
 
-[![License](https://img.shields.io/:license-mit-blue.svg)](https://mit-license.org) [![Build Status](https://travis-ci.com/smi11/tprint-lua.svg?branch=main)](https://travis-ci.com/smi11/tprint-lua) [![Coverage Status](https://coveralls.io/repos/github/smi11/tprint-lua/badge.svg)](https://coveralls.io/github/smi11/tprint-lua)
+[![License](https://img.shields.io/:license-mit-blue.svg)](https://mit-license.org) [![Build Status](https://travis-ci.com/smi11/tprint-lua.svg?branch=main)](https://app.travis-ci.com/smi11/tprint-lua.svg?branch=main) [![Coverage Status](https://coveralls.io/repos/github/smi11/tprint-lua/badge.svg)](https://coveralls.io/github/smi11/tprint-lua)
 
 Easily print reports and various data from tables in tabular format on your terminal.
 
