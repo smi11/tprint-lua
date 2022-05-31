@@ -75,6 +75,7 @@
       - added busted tests
       - first public release
       - modified option value to accept f(row,col[,width])
+      - added option rowSeparator
 
  0.2
       - didn't track all the changes
@@ -729,11 +730,18 @@ function M.new(t, options)
   o.headerSeparator = o.headerSeparator == nil and type(o.header) == "table" or o.headerSeparator
   o.footerSeparator = o.footerSeparator == nil and o.footer ~= nil or o.footerSeparator
 
-  fassert(type(o.rowSeparator)=="table" or o.rowSeparator == nil,
-    "invalid option 'value' (table expected)")
-  o.rowSeparator = o.rowSeparator or {}
+  -- row separators
   local separator_map = {}
+  if type(o.rowSeparator)=="number" then
+    local n = o.rowSeparator
+    o.rowSeparator = nil
+    M.each(o.data, function(i) if i % n == 0 then separator_map[i] = true end end)
+  end
+  fassert(type(o.rowSeparator)=="table" or o.rowSeparator == nil,
+    "invalid option 'rowSeparator' (table or number expected)")
+  o.rowSeparator = o.rowSeparator or {}
   for _, row in ipairs(o.rowSeparator) do
+    fassert(type(row)=="number","invalid value '%s' for option 'rowSeparator' (number expected)", row)
     separator_map[row] = true
   end
   o.rowSeparator = separator_map

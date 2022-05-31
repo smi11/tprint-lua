@@ -124,6 +124,7 @@ Available options are:
 | `headerSeparator` | Show header separator line                             |
 | `footer`          | What to display for column footer                      |
 | `footerSeparator` | Show footer separator line                             |
+| `rowSeparator`    | Show separator line on selected rows                   |
 | `filter`          | Function to filter data                                |
 | `sort`            | Sort order for columns                                 |
 | `sortCmp`         | Custom compare function for sort                       |
@@ -223,6 +224,7 @@ Improvements, suggestions and fixes are welcome.
 - added busted tests
 - first public release
 - modified option value to accept f(row,col[,width])
+- added option rowSeparator
 
 ### 0.2
 

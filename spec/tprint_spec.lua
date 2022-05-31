@@ -313,7 +313,7 @@ end)
 
 local examples = {"column", "header", "footer", "filter", "sort",
                   "format", "value",  "width",  "align", "valign",
-                  "wrap",   "frame"}
+                  "wrap",   "frame",  "rowseparator"}
 
 local function render(fn)
   local buf = {}

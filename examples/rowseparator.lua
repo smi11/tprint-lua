@@ -9,10 +9,24 @@ local list = {
 }
 
 -- add row separators on row 2 and 4
-print(tp(list,{column={"item","note","price","discount","qty"}, rowSeparator={2, 4}, frame=tp.FRAME_ASCII}), "\n")
+print(tp(list,{column={"item","note","price","discount","qty"},
+               rowSeparator={2, 4},
+               frame=tp.FRAME_ASCII}), "\n")
 
 -- add row separator on first row
-print(tp(list,{column={"item","note","price","discount","qty"}, rowSeparator={1}, frame=tp.FRAME_ASCII}), "\n")
+print(tp(list,{column={"item","note","price","discount","qty"},
+               rowSeparator={1},
+               frame=tp.FRAME_ASCII}), "\n")
+
+-- add row separator after every 1 row
+print(tp(list,{column={"item","note","price","discount","qty"},
+               rowSeparator=1,
+               frame=tp.FRAME_ASCII}), "\n")
+
+-- add row separator after every 3 rows
+print(tp(list,{column={"item","note","price","discount","qty"},
+               rowSeparator=3,
+               frame=tp.FRAME_ASCII}), "\n")
 
 local _, msg, err
 
@@ -31,7 +45,7 @@ print(msg)
 
 function err()
   print(tp(list,{column={"item","note","price","discount","qty"},
-                 rowSeparator=2}), "\n")
+                 rowSeparator={1, "wrong", 5}}), "\n")
 end
 
 _, msg = pcall(err)
