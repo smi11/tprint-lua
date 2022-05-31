@@ -75,6 +75,7 @@
       - added busted tests
       - first public release
       - modified option value to accept f(row,col[,width])
+      - added option rowSeparator
 
  0.2
       - didn't track all the changes
@@ -612,6 +613,9 @@ function mt:__tostring()
     for i in ipairs(row[1]) do
       out(eansi(frame[5]),table.concat(M.map(row,i), eansi(rc..frame[7])),eansi(frame[8]),"\n")
     end
+    if self.rowSeparator[l] and l < self.rows then
+      out(eansi(frame[9]),table.concat(tsep,frame[11]),eansi(frame[12]),"\n")
+    end
   end
 
   -- footer separator
@@ -725,6 +729,23 @@ function M.new(t, options)
   -- draw header and footer separator line
   o.headerSeparator = o.headerSeparator == nil and type(o.header) == "table" or o.headerSeparator
   o.footerSeparator = o.footerSeparator == nil and o.footer ~= nil or o.footerSeparator
+
+  -- row separators
+  local separator_map = {}
+  if type(o.rowSeparator)=="number" then
+    local n = o.rowSeparator
+    o.rowSeparator = nil
+    M.each(o.data, function(i) if i % n == 0 then separator_map[i] = true end end)
+  end
+  fassert(type(o.rowSeparator)=="table" or o.rowSeparator == nil,
+    "invalid option 'rowSeparator' (table or number expected)")
+  o.rowSeparator = o.rowSeparator or {}
+  for _, row in ipairs(o.rowSeparator) do
+    fassert(type(row)=="number","invalid value '%s' for option 'rowSeparator' (number expected)", row)
+    separator_map[row] = true
+  end
+  o.rowSeparator = separator_map
+
 
   -- value = optional functions to apply to every item by columns: f(self,val) -> value
   fassert(type(o.value)=="table" or type(o.value)=="function" or o.value == nil,
