@@ -929,7 +929,7 @@ function M.new(t, options)
   -- iterate all rows and columns and get maxWidth and align
   local maxWidth = {}
   local datac = M.map(o.column, function() return {} end)
-  local rows
+  local rows = 0
   for rowi, rowt in ipairs(o.data) do
     for i, ckey in ipairs(o.column) do
       local val, callback = o.value[i](rowt,ckey)
@@ -940,6 +940,8 @@ function M.new(t, options)
     end
     rows=rowi
   end
+  -- make sure o.align is set for all columns in case of empty o.data
+  M.each(o.column, function(i) o.align[i] = o.align[i] or "left" end)
   o.datac = datac
   o.rows = rows
 
